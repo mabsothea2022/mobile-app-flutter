@@ -3,21 +3,43 @@ import 'package:app2/basic_module/home_screen.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class NetflixScreen_HomeWork extends StatelessWidget {
+class NetflixScreen_HomeWork extends StatefulWidget {
   // Remove the 'const' keyword from the constructor
   NetflixScreen_HomeWork({Key? key}) : super(key: key);
+
+  @override
+  State<NetflixScreen_HomeWork> createState() => _NetflixScreen_HomeWorkState();
+}
+
+class _NetflixScreen_HomeWorkState extends State<NetflixScreen_HomeWork> {
+  String _text = "Netflix";
+  bool _dark = true; // _ refer to private varaible
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: _dark ? Colors.black : Colors.grey[300],
       appBar: AppBar(
         title: Text("Netflix"),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: _dark ? Colors.blueGrey : Colors.pink,
         actions: [
           IconButton(
             onPressed: () {
+              setState(() {
+                _dark = !_dark;
+              });
+              print(_text);
               Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => HomeScreen(),
               ));
+            },
+            icon: Icon(_dark ? Icons.light_mode : Icons.dark_mode),
+          ),
+          IconButton(
+            onPressed: () {
+              setState(() {
+                _text = "How are you?";
+              });
+              print(_text);
             },
             icon: Icon(Icons.share),
           ),

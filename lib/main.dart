@@ -1,7 +1,6 @@
-import 'package:app2/basic_module/basic_app.dart';
+import 'package:app2/api_module/api_app.dart';
 import 'package:flutter/material.dart';
 
-// Click => Ctrl + Alt + L (for auto formate code in flutter)
 void main() {
-  runApp(BasicApp());
+  runApp(ApiApp());
 }
