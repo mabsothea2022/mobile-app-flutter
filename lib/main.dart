@@ -1,6 +1,11 @@
-import 'package:app2/api_module/api_app.dart';
+import 'package:app2/api_module/sample_loading.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ApiApp());
+  runApp(
+    MaterialApp(
+      home: SampleLoading(),
+      debugShowCheckedModeBanner: false,
+    ),
+  );
 }
