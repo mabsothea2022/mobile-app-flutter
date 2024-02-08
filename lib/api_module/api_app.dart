@@ -9,9 +9,12 @@ class ApiApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: ApiScreen(),
-      darkTheme: ThemeData(
+      theme: ThemeData(
         textTheme: TextTheme(
           bodyMedium: TextStyle(fontSize: 20),
+        ),
+        listTileTheme: ListTileThemeData(
+          // titleTextStyle: TextStyle(fontSize: 20),
         ),
       ),
     );
