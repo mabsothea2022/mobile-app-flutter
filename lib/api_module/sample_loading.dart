@@ -24,8 +24,6 @@ class _SampleLoadingState extends State<SampleLoading> {
   }
 
   Future<int> _getTotal(int max) {
-    // _cale is name of method
-    // max is paramenter of
     return compute(_calc, max);
   }
 
@@ -43,7 +41,6 @@ class _SampleLoadingState extends State<SampleLoading> {
   }
 }
 
-// Declear new method
 int _calc(int max) {
   int total = 0;
   for (int index = 0; index < max; index++) {
